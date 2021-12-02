@@ -23,10 +23,17 @@ namespace Labb5_GenericClass
         static void Main(string[] args)
         {
 
-            Check_2<double> check_2 = new Check_2<double>();
-            Check_3<string> check_3 = new Check_3<string>();
-            PrintResult(check_2.ToCheck(55.10, 55.10));    // double
-            PrintResult(check_3.ToCheck("Hello", "Hi"));   // string
+            Check_2<double> check_2a = new Check_2<double>();
+            Check_2<string> check_2b = new Check_2<string>();
+
+            Check_3<double> check_3a = new Check_3<double>();
+            Check_3<string> check_3b = new Check_3<string>();
+
+
+            PrintResult(check_2a.ToCheck(55.10, 55.10));    // double
+            PrintResult(check_3a.ToCheck(30.10, 35.20));    // double
+            PrintResult(check_2b.ToCheck("Hello", "Hi"));   // string
+            PrintResult(check_3b.ToCheck("Hello", "Hello"));   // string
 
             Console.ReadLine();
         }
